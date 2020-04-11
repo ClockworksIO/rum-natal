@@ -1,0 +1,3 @@
+{:native-modules  ["react-native"
+                   "react"
+                   "create-react-class"]}

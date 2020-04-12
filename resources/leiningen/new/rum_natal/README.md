@@ -6,7 +6,7 @@ A Leiningen template for FIXME.
 
 Congratulations, you have already successfully setup a _rum-natal_ project. This is only half of the work you need to do before you can begin to build you React Native app with ClojureScript. Please follow the next steps to finish setting you project up.
 
-You can find the whole documentation on rum-natal `docs/rum-natal.md`
+You can find the whole documentation on rum-natal `docs/rum-natal/usage.md`
 
 ### React Native Boilerplate
 

@@ -89,7 +89,7 @@ Too build booth `index.android.js` and `index.ios.js` run
 lein collect-dev
 ```
 
-**Note**: You have to re-run this command every time you add media assets or when switching von production build to development build!
+**Note**: You have to re-run this command every time you add media assets or when switching from production build to development build!
 
 ### Android
 

@@ -1,4 +1,4 @@
-(defproject rum-natal/lein-template "0.1.0"
+(defproject rum-natal/lein-template "0.1.1"
   :description "A leiningen template to build react native applications in clojure with rum as a react wrapper."
   :url "https://github.com/ClockworksIO/rum-natal"
   :license {:name "MIT License"

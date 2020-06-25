@@ -27,7 +27,7 @@
              ["env/dev/env/android/main.cljs" (render "env/dev/env/android/main.cljs" data)]
              ["env/dev/env/ios/main.cljs" (render "env/dev/env/ios/main.cljs" data)]
              ["env/prod/env/ios/main.cljs" (render "env/prod/env/ios/main.cljs" data)]
-             ["env/prod/env/ios/main.cljs" (render "env/prod/env/ios/main.cljs" data)]
+             ["env/prod/env/android/main.cljs" (render "env/prod/env/android/main.cljs" data)]
              ["src/cljsjs/react.cljs" (render "cljsjs/react.cljs" data)]
              ["src/cljsjs/react/dom.cljs" (render "cljsjs/react/dom.cljs" data)]
              ["src/sablono/compiler.clj" (render "sablono/compiler.clj" data)]

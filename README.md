@@ -8,7 +8,7 @@ A main difference to re-natal in terms of additional features is the support for
 
 ## Usage
 
-Please refer to [the docs](ressources/leiningen/new/rum_natal/rum-natal-usage.md) for further information on how to use rum-natal and its latest features and limitations.
+Please refer to [the docs](resources/leiningen/new/rum_natal/rum-natal-usage.md) for further information on how to use rum-natal and its latest features and limitations.
 
 ## License
 

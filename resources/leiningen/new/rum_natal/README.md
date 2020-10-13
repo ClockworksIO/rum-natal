@@ -1,6 +1,6 @@
 # {{name}}
 
-A Leiningen template for FIXME.
+A Leiningen template to build React Native apps using ClojureScript.
 
 ## Project Setup
 
@@ -43,13 +43,33 @@ lein collect-dev
 
 Now you can start figwheel and run your app either on a real device or in a simulator:
 ```bash
-lein figgheel android
+lein figwheel android
 yarn start
 npx react-native run-android
 ```
 To run your app on iOS just interchange _android_ with _ios_.
 
+#### Running on an Android Device
 
+If you run your app on an Android Device you will have to start adb and add some rules to allow traffic to flow between your host machine and your Android Device:
+```bash
+adb start-server
+adb reverse tcp:8081 tcp:8081
+adb reverse tcp:3449 tcp:3449
+```
+
+It might be necessary to run the commands above with sudo.
+
+### Build a Production Version of your App
+
+To build a production version of your app you can either create a production build or an advanced production build by running one of the following commands:
+```bash
+lein prod-build
+# or
+lein advanced-build
+```
+
+To create either a runnable Android or iOS version plase follow the official React Native guides from here.
 
 ## Usage
 

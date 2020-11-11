@@ -32,9 +32,9 @@
               :style  {:width 80
                        :height 80
                        :marginBottom 30}})
-    (c/TouchableHighlight {:style {:backgroundColor "#999"}
-                                  :padding 10
-                                  :borderRadius 5
+    (c/TouchableHighlight {:style {:backgroundColor "#999"
+                                   :padding 10
+                                   :borderRadius 5}
                            :onPress #(alert "HELLO!")}
           (c/Text {:style {:color "white"
                            :textAlign "center"

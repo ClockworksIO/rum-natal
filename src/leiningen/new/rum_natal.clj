@@ -34,8 +34,8 @@
              ["src/sablono/core.cljs" (render "sablono/core.cljs" data)]
              ;
              ["src/rum_natal/core.clj" (render "rum_natal/core.clj" data)]
-             ["src/rum_natal/components.cljs" (render "rum_natal/components.cljs" data)]
-             ["src/rum_natal/util.cljs" (render "rum_natal/util.cljs" data)]
+             ;["src/rum_natal/components.cljs" (render "rum_natal/components.cljs" data)]
+             ;["src/rum_natal/util.cljs" (render "rum_natal/util.cljs" data)]
              ;
              ["src/{{name}}/ios/core.cljs" (render "ios/core.cljs" data)]
              ["src/{{name}}/android/core.cljs" (render "android/core.cljs" data)]

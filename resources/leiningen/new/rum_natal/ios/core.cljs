@@ -1,9 +1,9 @@
 (ns {{name}}.ios.core
   ""
   (:require-macros [rum.core :refer [defc]])
-  (:require [rum-natal.util :as util]
-            [rum.core :as rum]
-            [rum-natal.components :as c]))
+  (:require [rum.core :as rum]
+            [rum-native.util :as util]
+            [rum-native.components :as c]))
 
 ;;; REACT SETUP
 

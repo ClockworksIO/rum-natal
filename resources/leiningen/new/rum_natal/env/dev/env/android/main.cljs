@@ -1,7 +1,10 @@
 (ns ^:figwheel-no-load env.android.main
-  (:require [{{name}}.android.core :as core]
+  (:require [devtools.core :as devtools]
+            [{{name}}.android.core :as core]
             [figwheel.client :as fw]
             [env.config :as conf]))
+
+(devtools/install!)
 
 (assert (exists? core/init) "Fatal Error - Your core.cljs file doesn't define an 'init' function!!! - Perhaps there was a compilation failure?")
 (assert (exists? core/root-component-factory) "Fatal Error - Your core.cljs file doesn't define an 'root-component-factory' function!!! - Perhaps there was a compilation failure?")

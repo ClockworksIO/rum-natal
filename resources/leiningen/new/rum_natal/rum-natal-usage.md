@@ -10,7 +10,7 @@ A main difference to re-natal in terms of additional features is the support for
 
 As of now rum-natal is still in an early phase and should be used with care. It is compatibility with different versions of React and React Native as well as with different third party components is not tested well (if at all).
 
-That being sad rum-natal is a collection of code derived from project re-natal and two recent projects I build with Cojurescript and React Native with success.
+That being sad rum-natal is a collection of code derived from project re-natal and two recent projects I build with Clojurescript and React Native with success.
 
 At this time the format of media assets supported by the automatic asset collection is very limited.
 
@@ -27,16 +27,21 @@ Rum-Natal was created and is tested with
 
 ## Project Setup
 
-### Clojure Setup
+### Basic Setup
 
-To create a new project with rum-natal first install the leiningen template and then run `lein new rum-natal <project-name>`.
-
-### React Native Boilerplate
-
-Your project directory only contains the Clojure part yet. Now go to the projects parent directory and initialize a new React Native project in the project directory you just created.
-```bash
-react-native init <project-name> --version 0.63.2
+To create a new project with rum-natal begin with creating a React Native project:
+```sh
+react-native init <projectName> --version 0.63.2
 ```
+Keep in mind that the project name should be either be camel case or snake case. The kebab case style commonly used for Clojure modules is incompatible with React Native project names.
+
+After you have setup the React Native project create the necessary Clojure project files by running the following command still from the projects parent directory:
+```sh
+lein new rum-natal <project-name> --to-dir ./<projectName> --force
+```
+You have to force leiningen to use the existing directory. As you can see at this point you should use kebab case style for the Clojure project name.
+
+Now go to the project directory and finish setting up dependencies and version control.
 
 As of React Native 0.63.x and newer you have to install the following additional dependencies:
 ```bash

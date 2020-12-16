@@ -3,11 +3,13 @@
   :url "http://example.com/FIXME"
   :license {:name "Apache 2.0 License"
             :url "https://www.apache.org/licenses/LICENSE-2.0"}
-  :dependencies [[org.clojure/clojure "1.10.0"]
+  :dependencies [[org.clojure/clojure       "1.10.0"]
                  [org.clojure/clojurescript "1.10.597"]
-                 [org.clojure/core.async  "0.4.582"]
-                 [leiningen-core "2.9.4"]
-                 [rum "0.12.3" :exclusions [cljsjs/react cljsjs/react-dom sablono]]]
+                 [org.clojure/core.async    "1.3.610"]
+                 [leiningen-core            "2.9.4"]
+                 [rum                       "0.12.3"
+                  :exclusions [cljsjs/react cljsjs/react-dom sablono]]
+                 [rum-native                "0.1.0-SNAPSHOT"]]
   :plugins [[lein-figwheel "0.5.19"]
             [lein-cljsbuild "1.1.7" :exclusions [[org.clojure/clojure]]]
             [lein-bikeshed "0.5.2"]
@@ -25,8 +27,10 @@
                          ["do" "clean"
                           ["with-profile" "advanced" "cljsbuild" "once"]]}
   :jvm-opts ["-XX:+IgnoreUnrecognizedVMOptions" "--add-modules=java.xml.bind"]
-  :profiles {:dev {:dependencies [[figwheel-sidecar "0.5.18"]
-                                  [cider/piggieback "0.4.0"]]
+  :profiles {:dev {:dependencies [[figwheel-sidecar   "0.5.18"]
+                                  [cider/piggieback   "0.4.0"]
+                                  [binaryage/devtools "1.0.2"]
+                                  [camel-snake-kebab  "0.4.2"]]
                    :source-paths ["src" "env/dev"]
                    :cljsbuild    {:builds [
                                            {:id           "ios"

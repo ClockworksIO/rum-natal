@@ -3,7 +3,7 @@
   (:require-macros [rum.core :refer [defc]])
   (:require [rum.core :as rum]
             [rum-native.util :as util]
-            [rum-native.components :as c]))
+            [rum-native.core :as c]))
 
 ;;; REACT SETUP
 

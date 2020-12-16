@@ -3,7 +3,8 @@
   (:require
    [clojure.edn :as edn]
    [clojure.string :as string]
-   [leiningen.core.main :as main]))
+   [leiningen.core.main :as main]
+   [camel-snake-kebab.core :as csk]))
 
 
 (defn collect-assets
@@ -32,7 +33,7 @@
          "\n"
          (string/join "\n" asset-modules-js)
          "\n"
-         "require('./figwheel-bridge').withModules(modules).start('"proj-name"','android','localhost');")))
+         "require('./figwheel-bridge').withModules(modules).start('"(csk/->camelCase proj-name)"','android','localhost');")))
 
 
 (defn mk-ios-index
@@ -49,7 +50,7 @@
          "\n"
          (string/join "\n" asset-modules-js)
          "\n"
-         "require('./figwheel-bridge').withModules(modules).start('"proj-name"','ios','localhost');")))
+         "require('./figwheel-bridge').withModules(modules).start('"(csk/->camelCase proj-name)"','ios','localhost');")))
 
 
 

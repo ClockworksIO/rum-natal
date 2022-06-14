@@ -4,7 +4,7 @@
 
 Rum-Natal is based on project [re-natal](https://github.com/drapanjanas/re-natal).
 
-A main difference to re-natal in terms of additional features is the support for the currently newest react-native version _0.63.2_ that includes AndroidX support.
+A main difference to re-natal in terms of additional features is the support for AndroidX which was introduced in React Native _0.63.0_.
 
 ## Limitations
 
@@ -16,14 +16,14 @@ At this time the format of media assets supported by the automatic asset collect
 
 ## Dependencies and Compatibility
 
-Rum-Natal was created and is tested with
-- `react-native 0.63.2`
-- `react 16.13.1`
+Rum-Natal was successfully is tested with
+- `react-native 0.68.2`
+- `react 17.0.2`
 - `create-react-class 15.7.0`
-- `clojure 1.10`
-- `clojurescript 1.10.597`
-- `leiningen 2.9.1`
-- `lein-figwheel 0.5.19`
+- `clojure 1.11.1`
+- `clojurescript 1.11.57`
+- `leiningen 2.9.8`
+- `lein-figwheel 0.5.20`
 
 ## Project Setup
 
@@ -31,7 +31,7 @@ Rum-Natal was created and is tested with
 
 To create a new project with rum-natal begin with creating a React Native project:
 ```sh
-react-native init <projectName> --version 0.63.2
+react-native init <projectName>
 ```
 Keep in mind that the project name should be either be camel case or snake case. The kebab case style commonly used for Clojure modules is incompatible with React Native project names.
 
@@ -59,6 +59,7 @@ Last you should add the following to your `.gitignore` file to keep your reposit
 target/
 figwheel_server.log
 .lein-repl-history
+.lein-failures
 index.android.js
 index.ios.js
 ```

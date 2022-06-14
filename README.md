@@ -4,7 +4,7 @@
 
 Rum-Natal is based on project [re-natal](https://github.com/drapanjanas/re-natal).
 
-A main difference to re-natal in terms of additional features is the support for the currently newest react-native version _0.63.2_ that includes AndroidX support.
+A main difference to re-natal in terms of additional features is the support for the currently newest react-native version _0.68.2_ that includes AndroidX support.
 
 ## Usage
 

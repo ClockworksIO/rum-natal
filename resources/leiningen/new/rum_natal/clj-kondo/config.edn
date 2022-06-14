@@ -1,0 +1,6 @@
+{:hooks {:analyze-call {rum.core/defc  clj-kondo.rum/defc
+                        rum.core/defcs clj-kondo.rum/defcs}}
+ :lint-as {rum.core/defcc rum.core/defc}
+ :linters {:missing-docstring {:level :warning}
+           :unresolved-symbol {:exclude [goog.DEBUG
+                                         (garden.def/defstyles)]}}}

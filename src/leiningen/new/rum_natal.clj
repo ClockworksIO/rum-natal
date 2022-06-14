@@ -12,7 +12,7 @@
   (let [data {:name name
               :raw-name name
               :sanitized (name-to-path name)}]
-    (main/info "Generating fresh 'lein new' rum-natal project.")
+    (main/info "Creating a new leiningen rum-natal project...")
     (->files data
              ["project.clj" (render "project.clj" data)]
              ["rum-natal.edn" (render "rum-natal.edn" data)]
@@ -21,7 +21,7 @@
              ["LICENSE" (render "LICENSE")]
              ["CHANGELOG.md" (render "CHANGELOG.md" data)]
              ["docs/rum-natal/usage.md" (render "rum-natal-usage.md")]
-             ["docs/rum-natal/components.md" (render "rum-natal-components.md")]
+             ;["docs/rum-natal/components.md" (render "rum-natal-components.md")]
              ["env/dev/user.clj" (render "env/dev/user.clj" data)]
              ["env/dev/env/config.cljs" (render "env/dev/env/config.cljs" data)]
              ["env/dev/env/android/main.cljs" (render "env/dev/env/android/main.cljs" data)]
@@ -39,7 +39,10 @@
              ;
              ["src/{{name}}/ios/core.cljs" (render "ios/core.cljs" data)]
              ["src/{{name}}/android/core.cljs" (render "android/core.cljs" data)]
-
+             ".clj-kondo/clj_kondo/"
+             [".clj-kondo/.gitignore" (render "clj-kondo/gitignore")]
+             [".clj-kondo/config.edn" (render "clj-kondo/config.edn")]
+             [".clj-kondo/clj_kondo/rum.clj" (render "clj-kondo/clj_kondo/rum.clj")]
              "assets"
              ["assets/images/cljs.png" (binary "assets/images/cljs.png")]
              ["assets/images/cljs@2x.png" (binary "assets/images/cljs@2x.png")]

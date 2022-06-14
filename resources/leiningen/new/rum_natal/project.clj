@@ -3,19 +3,15 @@
   :url "http://example.com/FIXME"
   :license {:name "Apache 2.0 License"
             :url "https://www.apache.org/licenses/LICENSE-2.0"}
-  :dependencies [[org.clojure/clojure       "1.10.0"]
-                 [org.clojure/clojurescript "1.10.597"]
-                 [org.clojure/core.async    "1.3.610"]
-                 [leiningen-core            "2.9.4"]
-                 [rum                       "0.12.3"
+  :dependencies [[org.clojure/clojure       "1.11.1"]
+                 [org.clojure/clojurescript "1.11.57"]
+                 [org.clojure/core.async    "1.5.648"]
+                 [leiningen-core            "2.9.8"]
+                 [rum                       "0.12.9"
                   :exclusions [cljsjs/react cljsjs/react-dom sablono]]
-                 [rum-native                "0.1.0-SNAPSHOT"]]
-  :plugins [[lein-figwheel "0.5.19"]
-            [lein-cljsbuild "1.1.7" :exclusions [[org.clojure/clojure]]]
-            [lein-bikeshed "0.5.2"]
-            [lein-kibit "0.1.8"]
-            [lein-count "1.0.9"]
-            [lein-nvd "1.3.1"]]
+                 [rum-native                "1.0.0"]]
+  :plugins [[lein-figwheel "0.5.20"]
+            [lein-cljsbuild "1.1.8" :exclusions [[org.clojure/clojure]]]]
   :repl-options {:init-ns cljsrn.repl}
   :clean-targets ["target/" "index.ios.js" "index.android.js" #_($PLATFORM_CLEAN$)]
   :aliases {"collect-dev" ^{:doc "Collect static ressources and rebuild index files for development with figwheel."}
@@ -26,7 +22,7 @@
             "advanced-build" ^{:doc "Recompile code for production using :advanced compilation."}
                          ["do" "clean"
                           ["with-profile" "advanced" "cljsbuild" "once"]]}
-  :jvm-opts ["-XX:+IgnoreUnrecognizedVMOptions" "--add-modules=java.xml.bind"]
+  :jvm-opts ["-XX:+IgnoreUnrecognizedVMOptions" "--add-modules java.xml.bind"]
   :profiles {:dev {:dependencies [[figwheel-sidecar   "0.5.18"]
                                   [cider/piggieback   "0.4.0"]
                                   [binaryage/devtools "1.0.2"]
